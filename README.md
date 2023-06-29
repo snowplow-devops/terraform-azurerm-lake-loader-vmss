@@ -1,6 +1,6 @@
 [![Release][release-image]][release] [![CI][ci-image]][ci] [![License][license-image]][license] [![Registry][registry-image]][registry] [![Source][source-image]][source]
 
-# terraform-PROJECT_FULL_NAME
+# terraform-azurerm-lake-loader-vmss
 
 A Terraform module for EXPLAIN YOURSELF.
 
@@ -10,40 +10,26 @@ A Terraform module for EXPLAIN YOURSELF.
 INSERT USAGE EXAMPLE HERE
 ```
 
-## Testing
-
-Ensure that `terraform` is installed on your path and matches or exceeds the required version.  Then simply run:
-
-```bash
-make tidy && make test
-```
-
 __REPLACE ME__: `terraform-docs markdown table ./ --sort-by required`
 
 # Copyright and license
 
-The PROJECT__NAME_WITH_SPACES project is Copyright 2023-present Snowplow Analytics Ltd.
+The Terraform Azurerm Lake Loader on VMSS project is Copyright 2023-present Snowplow Analytics Ltd.
 
-Licensed under the [Apache License, Version 2.0][license] (the "License");
+Licensed under the [Snowplow Community License Agreement, Version 1.0][license] (the "License");
 you may not use this software except in compliance with the License.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+[release]: https://github.com/snowplow-devops/terraform-azurerm-lake-loader-vmss/releases/latest
+[release-image]: https://img.shields.io/github/v/release/snowplow-devops/terraform-azurerm-lake-loader-vmss
 
-[release]: https://github.com/snowplow-devops/terraform-PROJECT_NAME/releases/latest
-[release-image]: https://img.shields.io/github/v/release/snowplow-devops/terraform-PROJECT_NAME
+[ci]: https://github.com/snowplow-devops/terraform-azurerm-lake-loader-vmss/actions?query=workflow%3Aci
+[ci-image]: https://github.com/snowplow-devops/terraform-azurerm-lake-loader-vmss/workflows/ci/badge.svg
 
-[ci]: https://github.com/snowplow-devops/terraform-PROJECT_NAME/actions?query=workflow%3Aci
-[ci-image]: https://github.com/snowplow-devops/terraform-PROJECT_NAME/workflows/ci/badge.svg
+[license]: https://docs.snowplow.io/community-license-1.0/
+[license-image]: https://img.shields.io/badge/license-Snowplow--Community--License--v1-blue.svg?style=flat
 
-[license]: https://www.apache.org/licenses/LICENSE-2.0
-[license-image]: https://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
-
-[registry]: https://registry.terraform.io/modules/snowplow-devops/PROJECT_NAME/PROVIDER/latest
+[registry]: https://registry.terraform.io/modules/snowplow-devops/lake-loader-vmss/azurerm/latest
 [registry-image]: https://img.shields.io/static/v1?label=Terraform&message=Registry&color=7B42BC&logo=terraform
 
-[source]: https://github.com/snowplow/snowplow
-[source-image]: https://img.shields.io/static/v1?label=Snowplow&message=PROJECT%20NAME&color=0E9BA4&logo=GitHub
+[source]: https://github.com/snowplow-incubator/snowplow-lake-loader
+[source-image]: https://img.shields.io/static/v1?label=Snowplow&message=Lake%20Loader&color=0E9BA4&logo=GitHub
