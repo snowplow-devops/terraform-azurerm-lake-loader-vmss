@@ -1,0 +1,28 @@
+{
+  "input": {
+    "topicName": "${enriched_topic_name}"
+    "bootstrapServers": "${eh_namespace_broker}"
+    "consumerConf": {
+      "security.protocol": "SASL_SSL",
+      "sasl.mechanism": "PLAIN",
+      "sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"\$ConnectionString\" password=\"${enriched_topic_connection_string}\";"
+      "group.id": "${enriched_group_id}"
+    }
+  }
+
+  "output": {
+    "good": {
+      "location": "abfs://${storage_container_name}@${storage_account_name}.dfs.core.windows.net/${storage_container_path}"
+    }
+
+    "bad": {
+      "topicName": "${bad_topic_name}"
+      "bootstrapServers": "${eh_namespace_broker}"
+      "producerConf": {
+        "security.protocol": "SASL_SSL",
+        "sasl.mechanism": "PLAIN",
+        "sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"\$ConnectionString\" password=\"${bad_topic_connection_string}\";"
+      }
+    }
+  }
+}
