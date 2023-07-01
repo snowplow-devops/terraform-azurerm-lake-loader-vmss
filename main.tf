@@ -4,7 +4,7 @@ locals {
 
   app_name = "lake-loader-azure"
   # TODO: Change once 0.1.0 is published
-  app_version = "0.1.0-rc2"
+  app_version = "0.1.0-rc3"
 
   local_tags = {
     Name           = var.name
@@ -202,6 +202,13 @@ locals {
     storage_account_name   = var.storage_account_name
     storage_container_name = var.storage_container_name
     storage_container_path = var.storage_container_path
+
+    telemetry_disable          = !var.telemetry_enabled
+    telemetry_collector_uri    = join("", module.telemetry.*.collector_uri)
+    telemetry_user_provided_id = var.user_provided_id
+    telemetry_auto_gen_id      = join("", module.telemetry.*.auto_generated_id)
+    telemetry_module_name      = local.module_name
+    telemetry_module_version   = local.module_version
   })
 
   user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
