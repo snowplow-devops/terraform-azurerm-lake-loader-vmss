@@ -11,7 +11,7 @@ variable "resource_group_name" {
 variable "app_version" {
   description = "Lake Loader app version to use. This variable facilitates dev flow, the modules may not work with anything other than the default value."
   type        = string
-  default     = "0.1.2"
+  default     = "0.1.3"
 }
 
 variable "subnet_id" {
