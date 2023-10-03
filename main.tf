@@ -1,6 +1,6 @@
 locals {
   module_name    = "lake-loader-vmss"
-  module_version = "0.1.1"
+  module_version = "0.2.0"
 
   app_name = "lake-loader-azure"
 
