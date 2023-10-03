@@ -80,12 +80,12 @@ module "lake_loader_service" {
   resource_group_name = local.resource_group_name
   subnet_id           = tolist(azurerm_virtual_network.vnet.subnet)[0].id
 
-  enriched_topic_name              = module.enriched_event_hub.name
-  enriched_topic_connection_string = module.enriched_event_hub.read_only_primary_connection_string
-  bad_topic_name                   = module.bad_event_hub.name
-  bad_topic_connection_string      = module.bad_event_hub.read_write_primary_connection_string
-  eh_namespace_name                = module.eh_namespace.name
-  eh_namespace_broker              = module.eh_namespace.broker
+  enriched_topic_name           = module.enriched_event_hub.name
+  enriched_topic_kafka_password = module.enriched_event_hub.read_only_primary_connection_string
+  bad_topic_name                = module.bad_event_hub.name
+  bad_topic_kafka_password      = module.bad_event_hub.read_write_primary_connection_string
+  eh_namespace_name             = module.eh_namespace.name
+  kafka_brokers                 = module.eh_namespace.broker
 
   storage_account_name   = module.storage_account.name
   storage_container_name = module.storage_container.name
