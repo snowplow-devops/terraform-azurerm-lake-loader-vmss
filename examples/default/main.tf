@@ -76,6 +76,8 @@ resource "azurerm_virtual_network" "vnet" {
 module "lake_loader_service" {
   source = "../.."
 
+  accept_limited_use_license = true
+
   name                = local.name
   resource_group_name = local.resource_group_name
   subnet_id           = tolist(azurerm_virtual_network.vnet.subnet)[0].id
