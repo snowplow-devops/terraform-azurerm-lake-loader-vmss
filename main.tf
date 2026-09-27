@@ -125,8 +125,8 @@ resource "azuread_application_password" "app_pasword" {
 }
 
 resource "azuread_service_principal" "sp" {
-  application_id = azuread_application.app_registration.application_id
-  use_existing   = true
+  client_id    = azuread_application.app_registration.client_id
+  use_existing = true
 }
 
 # Look up our container's resource ID
